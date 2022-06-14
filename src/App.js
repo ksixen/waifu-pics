@@ -95,7 +95,7 @@ const App = () => {
 
       <div className="big-pic">
         {bigPic ? (
-          <img src={bigPic.content} className="images" ref={BigPicRef} />
+          <img src={bigPic.content} alt={bigPic.content} className="images" ref={BigPicRef} />
         ) : (
           ""
         )}
@@ -104,7 +104,7 @@ const App = () => {
       <ul className="images-list">
         {state.map((el) => (
           <li key={el.id} onClick={() => changeBigPic(el.id)}>
-            <img className="images" src={el.content} />
+            <img className="images" alt={el.content} src={el.content} />
           </li>
         ))}
         <span ref={ScrollToEnd}></span>
